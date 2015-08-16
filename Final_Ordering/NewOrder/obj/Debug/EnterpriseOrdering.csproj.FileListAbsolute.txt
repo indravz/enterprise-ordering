@@ -1,0 +1,6 @@
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\NewOrder.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\NewOrder.pdb
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\itextsharp.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\NewOrder.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\NewOrder.pdb
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\EnterpriseOrdering.csprojResolveAssemblyReference.cache

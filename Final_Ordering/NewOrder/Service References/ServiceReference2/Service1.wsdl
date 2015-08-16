@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insert_order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="due" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="neg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_orderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insert_orderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getorderid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customer_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetorderidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetorderidResult" type="tns:ArrayOfClass1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class1" nillable="true" type="tns:Class1" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class1">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="oid" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getproducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="oid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getproductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getproductsResult" type="tns:ArrayOfClass2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class2" nillable="true" type="tns:Class2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="pid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pname" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Getstatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetstatusResult" type="tns:ArrayOfClass3" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass3">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class3" nillable="true" type="tns:Class3" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class3">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="os" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="otype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="oxml" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Getids">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetidsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetidsResult" type="tns:ArrayOfClass4" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass4">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class4" nillable="true" type="tns:Class4" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class4">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="order_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="customer_id" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Getaddress_id">
+        <s:complexType />
+      </s:element>
+      <s:element name="Getaddress_idResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Getaddress_idResult" type="tns:ArrayOfClass5" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass5">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class5" nillable="true" type="tns:Class5" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class5">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="aid" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insert_orderSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_order" />
+  </wsdl:message>
+  <wsdl:message name="insert_orderSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_orderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetorderidSoapIn">
+    <wsdl:part name="parameters" element="tns:Getorderid" />
+  </wsdl:message>
+  <wsdl:message name="GetorderidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetorderidResponse" />
+  </wsdl:message>
+  <wsdl:message name="getproductsSoapIn">
+    <wsdl:part name="parameters" element="tns:getproducts" />
+  </wsdl:message>
+  <wsdl:message name="getproductsSoapOut">
+    <wsdl:part name="parameters" element="tns:getproductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Getstatus" />
+  </wsdl:message>
+  <wsdl:message name="GetstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetidsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getids" />
+  </wsdl:message>
+  <wsdl:message name="GetidsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetidsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Getaddress_idSoapIn">
+    <wsdl:part name="parameters" element="tns:Getaddress_id" />
+  </wsdl:message>
+  <wsdl:message name="Getaddress_idSoapOut">
+    <wsdl:part name="parameters" element="tns:Getaddress_idResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="insert_order">
+      <wsdl:input message="tns:insert_orderSoapIn" />
+      <wsdl:output message="tns:insert_orderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getorderid">
+      <wsdl:input message="tns:GetorderidSoapIn" />
+      <wsdl:output message="tns:GetorderidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getproducts">
+      <wsdl:input message="tns:getproductsSoapIn" />
+      <wsdl:output message="tns:getproductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getstatus">
+      <wsdl:input message="tns:GetstatusSoapIn" />
+      <wsdl:output message="tns:GetstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getids">
+      <wsdl:input message="tns:GetidsSoapIn" />
+      <wsdl:output message="tns:GetidsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getaddress_id">
+      <wsdl:input message="tns:Getaddress_idSoapIn" />
+      <wsdl:output message="tns:Getaddress_idSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert_order">
+      <soap:operation soapAction="http://tempuri.org/insert_order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getorderid">
+      <soap:operation soapAction="http://tempuri.org/Getorderid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getproducts">
+      <soap:operation soapAction="http://tempuri.org/getproducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getstatus">
+      <soap:operation soapAction="http://tempuri.org/Getstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getids">
+      <soap:operation soapAction="http://tempuri.org/Getids" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getaddress_id">
+      <soap:operation soapAction="http://tempuri.org/Getaddress_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert_order">
+      <soap12:operation soapAction="http://tempuri.org/insert_order" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getorderid">
+      <soap12:operation soapAction="http://tempuri.org/Getorderid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getproducts">
+      <soap12:operation soapAction="http://tempuri.org/getproducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getstatus">
+      <soap12:operation soapAction="http://tempuri.org/Getstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getids">
+      <soap12:operation soapAction="http://tempuri.org/Getids" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getaddress_id">
+      <soap12:operation soapAction="http://tempuri.org/Getaddress_id" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://192.168.0.75:87/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://192.168.0.75:87/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

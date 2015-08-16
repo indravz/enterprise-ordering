@@ -1,0 +1,10 @@
+C:\Users\admin\Desktop\asha\day9\ordertable\ordertable\bin\ordertable.dll
+C:\Users\admin\Desktop\asha\day9\ordertable\ordertable\bin\ordertable.pdb
+C:\Users\admin\Desktop\asha\day9\ordertable\ordertable\obj\Debug\ordertable.dll
+C:\Users\admin\Desktop\asha\day9\ordertable\ordertable\obj\Debug\ordertable.pdb
+C:\Users\admi\Desktop\Project\ordertable\ordertable\bin\ordertable.dll
+C:\Users\admi\Desktop\Project\ordertable\ordertable\bin\ordertable.pdb
+C:\Users\admi\Desktop\Project\ordertable\ordertable\bin\Oracle.DataAccess.dll
+C:\Users\admi\Desktop\Project\ordertable\ordertable\obj\Debug\ordertable.dll
+C:\Users\admi\Desktop\Project\ordertable\ordertable\obj\Debug\ordertable.pdb
+C:\Users\admi\Desktop\Project\ordertable\ordertable\obj\Debug\ordertable.csprojResolveAssemblyReference.cache

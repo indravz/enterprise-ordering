@@ -1,0 +1,17 @@
+C:\shalini\ASP.Net\NewOrder\NewOrder\bin\NewOrder.dll
+C:\shalini\ASP.Net\NewOrder\NewOrder\bin\NewOrder.pdb
+C:\shalini\ASP.Net\NewOrder\NewOrder\bin\itextsharp.dll
+C:\shalini\ASP.Net\NewOrder\NewOrder\obj\Debug\NewOrder.dll
+C:\shalini\ASP.Net\NewOrder\NewOrder\obj\Debug\NewOrder.pdb
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\bin\NewOrder.dll
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\bin\NewOrder.pdb
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\bin\itextsharp.dll
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\obj\Debug\NewOrder.csprojResolveAssemblyReference.cache
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\obj\Debug\NewOrder.dll
+C:\shalini\ASP.Net\NewOrder - Copy\NewOrder\obj\Debug\NewOrder.pdb
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\NewOrder.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\NewOrder.pdb
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\bin\itextsharp.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\NewOrder.csprojResolveAssemblyReference.cache
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\NewOrder.dll
+C:\shalini\ASP.Net\Final_Ordering\NewOrder\obj\Debug\NewOrder.pdb

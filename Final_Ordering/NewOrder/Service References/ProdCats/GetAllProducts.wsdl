@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAllProductsList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllProductsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllProductsListResult" type="tns:ArrayOfProductClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductClass" nillable="true" type="tns:ProductClass" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Product_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product_desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Prod_eff_date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Prod_end_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Service_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rate" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductsByServiceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviceid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsByServiceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsByServiceIDResult" type="tns:ArrayOfProductClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsByZipAndServiceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviceid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zip" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsByZipAndServiceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsByZipAndServiceIDResult" type="tns:ArrayOfProductClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnterpriseProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="state_code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zip" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnterpriseProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEnterpriseProductsResult" type="tns:ArrayOfProductClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductRates">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProductRatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductRatesResult" type="tns:ArrayOfProductRate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductRate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductRate" nillable="true" type="tns:ProductRate" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductRate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Product_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rate_eff_date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rate_end_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="State_code" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductDescriptionByProductName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Product_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductDescriptionByProductNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductDescriptionByProductNameResult" type="tns:ArrayOfProductClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllProductsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllProductsList" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProductsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllProductsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByServiceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductsByServiceID" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByServiceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsByServiceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByZipAndServiceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductsByZipAndServiceID" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsByZipAndServiceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsByZipAndServiceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnterpriseProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEnterpriseProducts" />
+  </wsdl:message>
+  <wsdl:message name="GetEnterpriseProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEnterpriseProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductRatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductRates" />
+  </wsdl:message>
+  <wsdl:message name="GetProductRatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductDescriptionByProductNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductDescriptionByProductName" />
+  </wsdl:message>
+  <wsdl:message name="GetProductDescriptionByProductNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductDescriptionByProductNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetAllProductsSoap">
+    <wsdl:operation name="GetAllProductsList">
+      <wsdl:input message="tns:GetAllProductsListSoapIn" />
+      <wsdl:output message="tns:GetAllProductsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByServiceID">
+      <wsdl:input message="tns:GetProductsByServiceIDSoapIn" />
+      <wsdl:output message="tns:GetProductsByServiceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByZipAndServiceID">
+      <wsdl:input message="tns:GetProductsByZipAndServiceIDSoapIn" />
+      <wsdl:output message="tns:GetProductsByZipAndServiceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnterpriseProducts">
+      <wsdl:input message="tns:GetEnterpriseProductsSoapIn" />
+      <wsdl:output message="tns:GetEnterpriseProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRates">
+      <wsdl:input message="tns:GetProductRatesSoapIn" />
+      <wsdl:output message="tns:GetProductRatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDescriptionByProductName">
+      <wsdl:input message="tns:GetProductDescriptionByProductNameSoapIn" />
+      <wsdl:output message="tns:GetProductDescriptionByProductNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAllProductsSoap" type="tns:GetAllProductsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllProductsList">
+      <soap:operation soapAction="http://tempuri.org/GetAllProductsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByServiceID">
+      <soap:operation soapAction="http://tempuri.org/GetProductsByServiceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByZipAndServiceID">
+      <soap:operation soapAction="http://tempuri.org/GetProductsByZipAndServiceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnterpriseProducts">
+      <soap:operation soapAction="http://tempuri.org/GetEnterpriseProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRates">
+      <soap:operation soapAction="http://tempuri.org/GetProductRates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDescriptionByProductName">
+      <soap:operation soapAction="http://tempuri.org/GetProductDescriptionByProductName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetAllProductsSoap12" type="tns:GetAllProductsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllProductsList">
+      <soap12:operation soapAction="http://tempuri.org/GetAllProductsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByServiceID">
+      <soap12:operation soapAction="http://tempuri.org/GetProductsByServiceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByZipAndServiceID">
+      <soap12:operation soapAction="http://tempuri.org/GetProductsByZipAndServiceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnterpriseProducts">
+      <soap12:operation soapAction="http://tempuri.org/GetEnterpriseProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRates">
+      <soap12:operation soapAction="http://tempuri.org/GetProductRates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDescriptionByProductName">
+      <soap12:operation soapAction="http://tempuri.org/GetProductDescriptionByProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAllProducts">
+    <wsdl:port name="GetAllProductsSoap" binding="tns:GetAllProductsSoap">
+      <soap:address location="http://192.168.0.35:99/GetAllProducts.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetAllProductsSoap12" binding="tns:GetAllProductsSoap12">
+      <soap12:address location="http://192.168.0.35:99/GetAllProducts.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
